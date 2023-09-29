@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jeremytubbs/deepzoom": "^1.0"
+    }
+}
