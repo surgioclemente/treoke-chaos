@@ -99,6 +99,19 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 
 
@@ -116,7 +129,7 @@
 
     <div class="p-2 mb-4 bg-body-tertiary rounded-3">
       <div class="container-fluid">
-        <p>Pan and zoom!</p>
+        <h3>Pan and zoom!</h3>
         <div id="openseadragon1" style="width: 100%; height: 600px;"></div>
         <script src="js/openseadragon.min.js"></script>
         <script type="text/javascript">
@@ -130,31 +143,33 @@
     </div>
 
     <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2>Check out the stream!</h2>
-          <!-- Add a placeholder for the Twitch embed -->
-          <div id="twitch-embed"></div>
+<!--      <div class="col-md-6">-->
+<!--        <div class="h-100 p-5 text-bg-dark rounded-3">-->
+<!--          <h2>Check out the stream!</h2>-->
+<!--          &lt;!&ndash; Add a placeholder for the Twitch embed &ndash;&gt;-->
+<!--          <div id="twitch-embed"></div>-->
 
-          <!-- Load the Twitch embed JavaScript file -->
-          <script src="https://embed.twitch.tv/embed/v1.js"></script>
+<!--          &lt;!&ndash; Load the Twitch embed JavaScript file &ndash;&gt;-->
+<!--          <script src="https://embed.twitch.tv/embed/v1.js"></script>-->
 
-          <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-          <script type="text/javascript">
-            new Twitch.Embed("twitch-embed", {
-              width: "100%",
-              height: 300,
-              channel: "treoke",
-              muted: true,
-              autoplay: false,
-            });
-          </script>
-        </div>
-      </div>
-      <div class="col-md-6">
+<!--          &lt;!&ndash; Create a Twitch.Embed object that will render within the "twitch-embed" element &ndash;&gt;-->
+<!--          <script type="text/javascript">-->
+<!--            new Twitch.Embed("twitch-embed", {-->
+<!--              width: "100%",-->
+<!--              height: 300,-->
+<!--              channel: "treoke",-->
+<!--              muted: true,-->
+<!--              autoplay: false,-->
+<!--            });-->
+<!--          </script>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="col-md-8 offset-md-2">
         <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-          <h2>Watch the vid!</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/oCK4Iqb2Dzg?si=QBPOhKP2s3tDUxqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h3>Watch the vid!</h3>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oCK4Iqb2Dzg?si=QBPOhKP2s3tDUxqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
